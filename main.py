@@ -7,10 +7,7 @@ import os
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:3000",
-    os.getenv("FRONTEND_URL", ""),
-]
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
